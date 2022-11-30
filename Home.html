@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="StockProjection.css">
 <link rel="stylesheet" type="text/json" href="manifest.json">
 </head>
@@ -11,6 +13,30 @@
 	<h2>$$$ Invested</h2>
 </header>
 <body>	
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyBzdL9PH8ngnVqUGIxqXPlAmrAWx5pCxRk",
+    authDomain: "stockprojection-3f37d.firebaseapp.com",
+    projectId: "stockprojection-3f37d",
+    storageBucket: "stockprojection-3f37d.appspot.com",
+    messagingSenderId: "941186944658",
+    appId: "1:941186944658:web:362905343b35ff79ad204b",
+    measurementId: "G-BFEVC16B2X"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+	
 <table>
 	<tr>
 	<th><h2>Watchlist</h2></th>
