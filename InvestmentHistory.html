@@ -6,12 +6,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="StockProjection.css">
 <link rel="stylesheet" type="text/json" href="manifest.json">
+<link rel="stylesheet" type="text/js" href="DB.js">
 </head>
 <header>
 	<ul><a href="UserInformation.html">User Information</a></ul>
 	<h1>Welcome, Name!</h1>
 </header>
 <body>	
+<script>
+  window.addEventListener('load', () => {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js').then(() => {
+        console.log('Service worker registered!');
+      }).catch((error) => {
+        console.warn('Error registering service worker:');
+        console.warn(error);
+      });
+    }
+  });
+</script>
 <script type="module">
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
